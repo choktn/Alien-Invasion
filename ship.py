@@ -14,6 +14,10 @@ class Ship(Sprite):
         self.screen_rect = screen.get_rect()
         self.destroyed = 0
 
+        self.center = None
+        self.moving_right = None
+        self.moving_left = None
+
     def draw_ship(self):
         self.image = pygame.image.load('images/ship.bmp')
         self.rect = self.image.get_rect()
@@ -44,24 +48,25 @@ class Ship(Sprite):
         transparent = (0, 0, 0)
         self.image.fill(transparent)
 
-    def ship_destroyed(self):
-        if self.destroyed == 1:
-            self.image = pygame.image.load('images/shipdestroy1.png')
-        elif self.destroyed == 2:
-            self.image = pygame.image.load('images/shipdestroy2.png')
-        elif self.destroyed == 3:
-            self.image = pygame.image.load('images/shipdestroy3.png')
-        elif self.destroyed == 4:
-            self.image = pygame.image.load('images/shipdestroy4.png')
-        elif self.destroyed == 5:
-            self.image = pygame.image.load('images/shipdestroy5.png')
-        elif self.destroyed == 6:
-            self.image = pygame.image.load('images/shipdestroy6.png')
-        elif self.destroyed == 7:
-            self.image = pygame.image.load('images/shipdestroy7.png')
-        elif self.destroyed == 8:
-            self.image = pygame.image.load('images/shipdestroy8.png')
-        elif self.destroyed == 9:
+    def ship_destroyed(self, screen_updates):
+        if self.destroyed == 9:
             self.image = pygame.image.load('images/ship.bmp')
-            self.destroyed = -1
-        self.destroyed += 1
+            self.destroyed = 0
+        if screen_updates % 10 == 0:
+            if self.destroyed == 1:
+                self.image = pygame.image.load('images/shipdestroy1.png')
+            elif self.destroyed == 2:
+                self.image = pygame.image.load('images/shipdestroy2.png')
+            elif self.destroyed == 3:
+                self.image = pygame.image.load('images/shipdestroy3.png')
+            elif self.destroyed == 4:
+                self.image = pygame.image.load('images/shipdestroy4.png')
+            elif self.destroyed == 5:
+                self.image = pygame.image.load('images/shipdestroy5.png')
+            elif self.destroyed == 6:
+                self.image = pygame.image.load('images/shipdestroy6.png')
+            elif self.destroyed == 7:
+                self.image = pygame.image.load('images/shipdestroy7.png')
+            elif self.destroyed == 8:
+                self.image = pygame.image.load('images/shipdestroy8.png')
+            self.destroyed += 1

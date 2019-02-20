@@ -113,13 +113,13 @@ def update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets, alien_
 
     for alien in aliens.sprites():
         if alien.destroyed > 0:
-            alien.alien_destroyed()
+            alien.alien_destroyed(screen_updates)
         if alien.destroyed == 4:
             aliens.remove(alien)
     if ship.destroyed > 0:
+        ship.ship_destroyed(screen_updates)
         if ship.destroyed == 9:
             ship_hit(stats, sb, ship, aliens, bullets, alien_bullets)
-        ship.ship_destroyed()
 
     if special_alien:
         for special in special_alien.sprites():
