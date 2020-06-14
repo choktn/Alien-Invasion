@@ -1,8 +1,8 @@
-Space Invaders 
+Alien Invasion
 =========================
 Description
 -------------------
-The old school, classic Space Invaders. This was created using Python 3.7.
+The old school, classic twist on Space Invaders, Alien Invasion. This was created using Python 3.7.
 
 How to run project
 --------------------  
