@@ -16,7 +16,7 @@ Left, Right Arrow Keys - left, right movement of the ship
 
 Spacebar - fire bullet
 
-Picture  
+Pictures  
 --------
 
 <a href="https://ibb.co/0MDPbf9"><img src="https://i.ibb.co/YkRvstd/alien1.png" alt="alien1" border="0" /></a>
