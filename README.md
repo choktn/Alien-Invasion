@@ -2,7 +2,7 @@ Alien Invasion
 =========================
 Description
 -------------------
-The old school, classic twist on Space Invaders, Alien Invasion made in Python. Sprites were created using [Piskel](https://www.piskelapp.com/)
+The old school, classic twist on Space Invaders, Alien Invasion made in Python. Sprites were created using [Piskel](https://www.piskelapp.com/).
 
 How to run project
 --------------------  
